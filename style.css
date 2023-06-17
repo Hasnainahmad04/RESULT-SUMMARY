@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap");
+/* font-family: 'Hanken Grotesk', sans-serif; */
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #fff;
+  font-family: "Hanken Grotesk", sans-serif;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.outer-card {
+  display: flex;
+  border-radius: 1em;
+  flex-direction: row;
+  box-shadow: 16px 16px 33px rgba(0, 0, 0, 0.1),
+    -16px -16px 33px rgba(0, 0, 0, 0.1);
+}
+.card-result {
+  width: 20em;
+  background: linear-gradient(353deg, #2e2be9 0%, #7857ff 92%);
+  text-align: center;
+  padding: 2em 3em;
+  border-radius: 1em;
+  display: flex;
+  /* height: fit-content; */
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.card-result > .circle {
+  width: 9em;
+  height: 9em;
+  border-radius: 5em;
+  background: linear-gradient(
+    56deg,
+    rgba(36, 33, 202, 1) 0%,
+    rgba(78, 33, 202, 1) 100%
+  );
+  margin: 1.3em 0;
+  box-shadow: 16px 16px 33px #2e2be9, -16px -16px 33px #7857ff;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  background-color: black;
+
+  flex-direction: column;
+}
+.card-result h3 {
+  display: block;
+  color: hsl(241, 100%, 89%);
+}
+.card-result h2 {
+  color: white;
+  font-weight: 700;
+  margin: 0.5em 0;
+}
+.card-result p {
+  color: white;
+  font-weight: 500;
+}
+.card-result .circle h1 {
+  font-weight: 800;
+  font-size: 3em;
+  color: white;
+}
+.card-result .circle p {
+  font-weight: 300;
+  color: hsl(241, 100%, 89%);
+}
+
+.card-summary {
+  width: 20em;
+  padding: 2em;
+}
+
+.card-summary ul {
+  list-style: none;
+}
+.card-summary ul li {
+  display: flex;
+  padding: 0.8em;
+  background-color: #7857ff;
+  margin: 1em 0;
+  border-radius: 0.6em;
+  justify-content: space-between;
+}
+.card-summary ul li div {
+  display: flex;
+}
+.card-summary ul li div p {
+  margin: 0 0.8em;
+}
+.card-summary ul li p span {
+  color: hsl(241, 100%, 89%);
+}
+.card-summary ul li p#obtained {
+  color: black;
+}
+.card-summary ul li:nth-child(1) {
+  background-color: hsla(0, 100%, 67%, 0.1);
+  color: hsl(0, 100%, 67%);
+}
+.card-summary ul li:nth-child(2) {
+  background-color: hsla(39, 100%, 56%, 0.1);
+  color: hsl(39, 100%, 56%);
+}
+.card-summary ul li:nth-child(3) {
+  background-color: hsla(166, 100%, 37%, 0.1);
+  color: hsl(166, 100%, 37%);
+}
+.card-summary ul li:nth-child(4) {
+  background-color: hsla(234, 85%, 45%, 0.1);
+  color: hsl(234, 85%, 45%);
+}
+.card-summary button {
+  width: 100%; /* Set the width to 100% */
+  padding: 1em;
+  border: none;
+  border-radius: 2em;
+  color: white;
+  cursor: pointer;
+  background-color: hsl(226, 45%, 15%);
+  margin-top: 0.5em;
+}
+.card-summary button:hover {
+  background: linear-gradient(353deg, #2e2be9 0%, #7857ff 92%);
+}
+@media screen and (max-width: 400px) {
+  .card-result {
+    width: auto;
+    border-radius: 0;
+    border-bottom-left-radius: 1.3em;
+    border-bottom-right-radius: 1.3em;
+  }
+  .card-summary {
+    width: auto;
+  }
+  .container {
+    display: block;
+  }
+  .outer-card {
+    flex-direction: column;
+  }
+}
